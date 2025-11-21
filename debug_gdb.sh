@@ -105,9 +105,8 @@ echo   mcause  =
 info registers mcause
 echo \n
 
-# Definir comandos personalizados para ver métricas (Problema 3)
 define show_metrics
-    echo \n=== MÉTRICAS DE DEBUGGING (Problema 3) ===\n
+    echo \n=== MÉTRICAS DE DEBUGGING  ===\n
     echo \nCiclos de CPU (rdcycle):\n
     printf "  P1: %llu (0x%llx)\n", cycle_count_p1, cycle_count_p1
     printf "  P2: %llu (0x%llx)\n", cycle_count_p2, cycle_count_p2

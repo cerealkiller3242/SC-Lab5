@@ -37,15 +37,7 @@ start_scenario_1:
     li t0, 1
     j jump_to_first_process
 
-start_scenario_2:
-    # P1 → P3 → P2: empezar con P1
-    li t0, 1
-    j jump_to_first_process
 
-start_scenario_3:
-    # P2 → P1 → P3: empezar con P2
-    li t0, 2
-    j jump_to_first_process
 
 jump_to_first_process:
     # t0 = ID del primer proceso
@@ -115,54 +107,7 @@ scenario_1:
 
     j scheduler_loop
 
-# ESCENARIO 2: P1P3P2
 
-scenario_2:
-    li t0, 1
-    jal ra, run_process
-
-    li t0, 3
-    jal ra, run_process
-
-    li t0, 2
-    jal ra, run_process
-
-    j scheduler_loop
-
-# ESCENARIO 3: P2P1P3
-
-scenario_3:
-    li t0, 2
-    jal ra, run_process
-
-    li t0, 1
-    jal ra, run_process
-
-    li t0, 3
-    jal ra, run_process
-
-    j scheduler_loop
-
-# ESCENARIO 4: Syscalls (placeholder)
-
-scenario_4:
-
-
-    li t0, 1
-    jal ra, run_process
-
-    li t0, 2
-    jal ra, run_process
-
-    li t0, 3
-    jal ra, run_process
-
-    j scheduler_loop
-
-
-# FUNCIONES AUXILIARES
-
-# t0 = id del proceso
 run_process:
     # guardar el id del proceso actual
     # restaurar contexto del proceso seleccionado

@@ -23,10 +23,6 @@ clear_bss:
     j clear_bss
 
 bss_done:
-    # =================================================================
-    # CONFIGURAR TRAP VECTOR (pero SIN habilitar interrupciones aún)
-    # =================================================================
-    
     # 1. Configurar trap vector (mtvec) - modo directo
     la t0, trap_handler
     csrw mtvec, t0

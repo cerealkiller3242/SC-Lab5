@@ -18,10 +18,6 @@ extern int temps_index;
 // Variable para seleccionar el escenario del scheduler
 extern int current_scenario;
 
-// =============================================================================
-// MÉTRICAS DE DEBUGGING (Problema 3)
-// =============================================================================
-
 // Ciclos de CPU por proceso (rdcycle)
 extern unsigned long long cycle_count_p1;
 extern unsigned long long cycle_count_p2;

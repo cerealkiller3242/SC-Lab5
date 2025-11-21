@@ -10,11 +10,8 @@ int *temps_ptr = 0;
 int temps_len = 0;
 int temps_index = 0;
 
-int current_scenario = 1;  // Por defecto se usa el Escenario 1
+int current_scenario = 1;  //usa el Escenario 1
 
-// =============================================================================
-// MÉTRICAS DE DEBUGGING (Problema 3)
-// =============================================================================
 
 // Ciclos de CPU por proceso (rdcycle)
 unsigned long long cycle_count_p1 = 0;
